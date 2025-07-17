@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Make My Mood – Angry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap + AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+  body {
+    background: linear-gradient(to bottom, #F5F1E6, #D6C3B0);
+    font-family: 'Segoe UI', sans-serif;
+    color: #2C2F5C;
+    padding-top: 40px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    color: #2C2F5C;
+    animation: slideFadeIn 2s ease forwards;
+  }
+
+  @keyframes slideFadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .emoji {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .quote-box {
+    background-color: #ffffffd8;
+    border-left: 6px solid #2C2F5C;
+    border-radius: 16px;
+    padding: 20px 25px;
+    margin: 15px;
+    font-style: italic;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .quote-box::before {
+    content: '“';
+    font-size: 60px;
+    color: #2C2F5C;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+  }
+
+  .author {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: normal;
+    font-size: 15px;
+    color: #5c5a57;
+  }
+
+  .animated-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #2C2F5C;
+    margin: 30px auto;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #2C2F5C; }
+    100% { box-shadow: 0 0 15px #2C2F5C; }
+  }
+
+  .card {
+    background-color: #fff;
+    border: 2px solid #D6C3B0;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .card-title {
+    color: #2C2F5C;
+    font-weight: 600;
+  }
+
+  .card-text {
+    color: #4a4a4a;
+  }
+
+  .btn-primary {
+    background-color: #2C2F5C;
+    border-color: #2C2F5C;
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background-color: #1f223c;
+    border-color: #1f223c;
+  }
+
+  footer {
+    background-color: #F5F1E6;
+    text-align: center;
+    font-size: 14px;
+    color: #5b5b5b;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .quote-box {
+      font-size: 16px;
+      padding: 18px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .floating-emoji {
+  font-size: 2rem;
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.25;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Emojis -->
+ <!-- Floating Emojis -->
+<div class="floating-emoji" style="top: 5%; left: 8%; animation-delay: 0s;">😠</div>
+<div class="floating-emoji" style="top: 10%; right: 5%; animation-delay: 1s;">💢</div>
+<div class="floating-emoji" style="top: 20%; left: 15%; animation-delay: 2s;">🔥</div>
+<div class="floating-emoji" style="top: 30%; right: 18%; animation-delay: 3s;">😤</div>
+<div class="floating-emoji" style="top: 40%; left: 25%; animation-delay: 4s;">😡</div>
+<div class="floating-emoji" style="top: 50%; right: 12%; animation-delay: 5s;">😠</div>
+<div class="floating-emoji" style="top: 60%; left: 10%; animation-delay: 6s;">💢</div>
+<div class="floating-emoji" style="top: 70%; right: 8%; animation-delay: 7s;">🔥</div>
+<div class="floating-emoji" style="top: 80%; left: 20%; animation-delay: 8s;">😡</div>
+<div class="floating-emoji" style="bottom: 10%; right: 5%; animation-delay: 9s;">😤</div>
+<div class="floating-emoji" style="bottom: 5%; left: 3%; animation-delay: 10s;">😠</div>
+<div class="floating-emoji" style="top: 15%; right: 30%; animation-delay: 3.5s;">💢</div>
+
+  
+
+  <div class="container text-center" style="max-width: 1000px;">
+    <h1 data-aos="fade-down">Feeling Angry? <span class="emoji">😠</span></h1>
+    <p class="lead mb-3" data-aos="fade-up">Let the waves wash away the heat. Breathe in calm. Breathe out tension.</p>
+
+    <!-- Quotes -->
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="quote-box">"Speak when you are angry—and you will make the best speech you'll ever regret."<span class="author">— Ambrose Bierce</span></div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="quote-box">"For every minute you remain angry, you give up sixty seconds of peace of mind."<span class="author">— Ralph Waldo Emerson</span></div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="quote-box">"Anger doesn’t solve anything. It builds nothing, but it can destroy everything."<span class="author">— Lawrence G. Lovasik</span></div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="quote-box">"Let us not look back in anger, nor forward in fear, but around in awareness."<span class="author">— James Thurber</span></div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="quote-box">"Getting angry doesn’t solve anything. Instead, try to understand."<span class="author">— Dalai Lama</span></div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="quote-box">"The greatest remedy for anger is delay."<span class="author">— Seneca</span></div>
+      </div>
+    </div>
+
+    <div class="animated-divider" data-aos="zoom-in"></div>
+
+    <!-- Motivational Cards -->
+    <div class="row justify-content-center my-4">
+      <div class="col-md-4 mb-3" data-aos="fade-up">
+        <div class="card shadow-sm rounded-4 h-100">
+          <div class="card-body">
+            <h6 class="card-title">🌿 Cool Off</h6>
+            <p class="card-text">Step away from the situation. Even a few minutes help.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="card shadow-sm rounded-4 h-100">
+          <div class="card-body">
+            <h6 class="card-title">🎧 Express It</h6>
+            <p class="card-text">Write down what triggered you. Don’t filter. Just let it out.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card shadow-sm rounded-4 h-100">
+          <div class="card-body">
+            <h6 class="card-title">✨ Refocus</h6>
+            <p class="card-text">Think of one thing you’re grateful for at this moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calming Videos -->
+    <div class="video-container" data-aos="fade-up">
+      <h4 class="mb-4">🎥 Calming Videos</h4>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/aNXKjGFUlMs" title="Calm Down Video 1" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/W19PdslW7iw" title="Calm Down Video 2" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div data-aos="fade-up">
+      <a href="index.html" class="btn btn-primary btn-lg mt-4">&larr; Back to Mood Selector</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    "You don’t have to control your thoughts. You just have to stop letting them control you."<br>
+    © 2025 Make My Mood
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
